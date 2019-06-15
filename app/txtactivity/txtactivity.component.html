@@ -1,0 +1,47 @@
+
+<!-- saved from url=(0141)file:///C:/Users/marti/activity-app/src/app/txtactivity/txtactivity.component.html?title=TXT+Activity&content=Ivan+Martinez-Arias+Angular+7+# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+    <img src="file:///C:/Users/marti/activity-app/src/app/app.component_files/sub-buzz-5353-1535655420-1.webp" alt="ucscentrance" height="500" width="1350">
+    <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="file:///C:/Users/marti/activity-app/src/app/txtactivity/txtactivity.component.html?title=TXT+Activity&amp;content=Ivan+Martinez-Arias+Angular+7+#">
+    <i class="fas fa-cogs fa-spin"></i>
+    <span style="margin-left:10px">Ivan A. Martinez-Arias</span>
+  </a>
+</nav>
+
+<div class="container-fluid" id="no-padding">
+  <div class="row">
+    <div class="col-12">
+      <div class="video-container">
+        <video src="assets/vid.mp4" autoplay=""></video>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <!-- ng for goes here -->
+      <!-- this is your list of blogs being printed it updates because of two way data binding -->
+      <div *ngfor="let blog of blogs">
+        <h1>Photo of UCSC</h1>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <h1 class="center">Contents To Add To the Side</h1>
+      <!-- form goes here -->
+      <form [formgroup]="form" (ngsubmit)="onSubmit()" id="form">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Title</label>
+          <input type="text" class="form-control" formcontrolname="title" name="title">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Content</label>
+          <textarea type="text" class="form-control" formcontrolname="content" name="content"> </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+      </form>
+    </div>
+  </div>
+</div></body></html>
